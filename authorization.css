@@ -1,0 +1,55 @@
+/** {box-sizing: border-box;}*/
+
+form {
+  /*position: relative;*/
+  max-width: 1920px;
+  max-height: 1080px;
+  padding: 60px 50px;
+  top: 0px;
+  left: 0px;
+  /*margin: 50px 50px;*/
+  background-image: url(images/car.jpg);
+  /*background-position: center center;*/
+  background-size: cover;
+  background-color: red;
+}
+/*.form-inner {position: relative;}*/
+div h3 {
+/*  position: relative;
+  margin: 100 20;*/
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 46px;
+  text-transform: uppercase;
+}
+div label {
+  /*padding-left: 15px;*/
+  font-family: 'Roboto', sans-serif;
+  color: rgba(255,255,255,.6);
+  text-transform: uppercase;
+  font-size: 26px;
+}
+div input {
+  font-size: 36px;
+  width: 30%;
+/*  padding: 0 45px;
+  margin: 10px 0 15px;*/
+  border-width: 0;
+  line-height: 40px;
+  border-radius: 20px;
+  color: white;
+  background: rgba(255,255,255,.2);
+  font-family: 'Roboto', sans-serif;
+}
+/*div input[type="submit"] {
+    background: #2c2c34; 
+    font-size: 28px;
+    font-weight: 100;
+}*/
+
+strong{
+    color: white;
+    background: #2c2c34; 
+    font-size: 28px;
+}

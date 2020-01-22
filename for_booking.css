@@ -1,0 +1,56 @@
+body {background: #2c2c34;}
+.button {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #ff0000;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);    /*тень*/
+  transition: .3s;
+}
+.button:hover {
+  background: #ff0000;
+  box-shadow: 0 15px 20px rgba(255,0,0,.4);
+  color: white;
+  transform: translateY(-7px);
+}
+fieldset{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: white;
+  margin: 7px 690px;
+  background-color: #d90705;
+  border: 7px solid white;
+}
+legend {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: white;
+  margin: 10px; 
+}
+table td{text-align: center;} 
+
+input{
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 8px;
+}
+img.header{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}

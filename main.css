@@ -1,0 +1,138 @@
+body {background: #2c2c34;}
+/*#2c2c34*/
+div.text a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #ff0000;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);    /*тень*/
+  transition: .3s;
+  white-space: pre;
+}
+div.text a:hover {
+  background: #ff0000;
+  box-shadow: 0 15px 20px rgba(255,0,0,.4);
+  color: white;
+  transform: translateY(-7px);
+}
+a.exit {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 40px #ff0000 inset, 0 0 0 0 #ff0000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  transition: .15s ease-in-out;
+}
+a.exit:hover {
+  box-shadow: 0 0 10px 0 #ff0000 inset, 0 0 10px 4px #ff0000;
+  color: #ff0000;
+}
+.text{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-variant: small-caps;    /*строчные буквы как заглавные уменьшенного размера*/
+    color: white;
+    padding: 20px;
+/*    text-align: center;
+    width: 800px;*/
+}
+p {
+    font-size: 28px;
+    font-weight: 100;
+    color: white;
+    text-indent: 70px;
+}
+img.header{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+img {
+    position: relative;
+}
+strong{
+    font-size: 36;
+    font-family: "Century Gothic";
+    font-weight: 400; 
+    color: white;
+}
+#simple{
+    color: red;
+    background: #2c2c34;
+    box-shadow: 0 0 0;    /*тень*/
+    font-size: 20;
+    font-family: "Century Gothic";
+    font-weight: 600;
+}
+table{
+    border: 0;
+    /*background: rgba(255, 255, 255, 0.4);*/
+}
+table tr:first-child{
+    background: white;
+    color: red;
+}
+td{text-align: center;}
+th{color: red;}
+
+select{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    font-variant: small-caps;    /*строчные буквы как заглавные уменьшенного размера*/
+    color: red;
+    background-color: #2c2c34;
+    padding: 20px;
+/*    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;*/
+}
+
+
+.button {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #ff0000;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);    /*тень*/
+  transition: .3s;
+}
+.button:hover {
+  background: #ff0000;
+  box-shadow: 0 15px 20px rgba(255,0,0,.4);
+  color: white;
+  transform: translateY(-7px);
+}
