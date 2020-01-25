@@ -5,7 +5,6 @@
 
 session_start();
 $username = $_SESSION['username'];
-//echo 'SESSION[user] = '.$_SESSION['username'];
 ?>
 <html>
     <head>
@@ -15,7 +14,7 @@ $username = $_SESSION['username'];
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--для мобильных устройств-->
     </head>
     <body>
-<!--        <form action="main_obrab.php" method="post" name="form">-->
+        <form action="">
         <img src="images\F1_heading_new.jpg" height="100px" alt='header' class="header">
         <br><br><br><br><br><div align="right" class="exit"><a href="exit.php" class="exit">ВЫЙТИ</a></div>
         <div align="center" class="text">

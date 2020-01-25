@@ -19,7 +19,6 @@ if(isset($_POST['password'])) { $passw=$_POST['password']; } else {     echo '<h
 if(isset($_POST['verification'])) { $verify=$_POST['verification']; } else {     echo '<h3>'.'Данные введены не полностью!'.'</h3>'.'<br>';    exit();}
 if(isset($_POST['phone'])) { $phone=$_POST['phone']; } else {     echo '<h3>'.'Пожалуйста, введите номер телефона'.'</h3>'.'<br>';    exit();}
 if(isset($_POST['email'])) { $email=$_POST['email']; } else {     $email = '-';}
-//echo '<h3>'.''.'</h3>';
 $existing_name = mysqli_query($link,"SELECT name FROM users WHERE name = '$new_name'");
 if(ctype_digit($phone)!='false' or ctype_alpha(str_split($new_name)[0])!='false'){
     echo '<h3>'.'Неверный формат номера или логина! (Логин должен начинаться с буквы)'.'</h3>'.'<br>';
@@ -42,7 +41,6 @@ else{
         exit();
     }
     $_SESSION['username'] = $new_name;
-    //echo 'SESSION["username"] = '.$_SESSION['username'];
     echo '<h3>'.'Поздравляем, Вы успешно зарегестрированы!'.'</h3>';
     
     $required_res1 = mysqli_query($link,"SELECT max(id) FROM users");   # LAST_INSERT_ID можно использовать и в запросе добавлять без id - он будет автоматически
@@ -57,8 +55,6 @@ else{
     $pId = 1 + (int)$max_id_passw[0];
     $hId = 1 + (int)$max_id_hash[0];
     
-    //$_SESSION['userID'] = $uId; не понадобилось
-//    $pId = $hId;
     $paswId = $pId;//
     $hashId = $hId;//
     $email = $new_name.'@...';
@@ -69,16 +65,14 @@ else{
     $result2 = mysqli_query($link,"INSERT INTO hashes (id,pass_hash) VALUES ('$hId','$pHash')");
     $result3 = mysqli_query($link,"INSERT INTO passwords (id,password,verification,salt,hash_id) VALUES ('$pId','$passw','$verify','$salt','$hashId')");
     $result4 = mysqli_query($link,"INSERT INTO users (id,name,passw_id,phone,email) VALUES ('$uId','$new_name','$paswId','$phone','$email')");
-//    var_dump($result2, $result3, $result4);
     if($result2!='true' or $result3!='true' or $result4!='true'){
         echo '<h3>'.'Информация в базу'.'<b>'.' не '.'</b>'.'добавлена'.'</h3>';
     }
     else{
         echo '<h3>'.'Информация в базу'.'<i>'.' успешно '.'</i>'.'добавлена'.'</h3>';
-        header("Refresh: 5;  url=main.php");
+        header("Refresh: 0;  url=main.php");
     }
 }
-
 mysqli_close($link);
 ?>
     

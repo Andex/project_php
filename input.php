@@ -1,7 +1,6 @@
 <?php
 session_start();
 $_SESSION['username'] = (isset($_SESSION['username'])) ? $_SESSION['username'] : 0; //true - что-то есть и не null
-//echo '$_SESSION[username] = '.$_SESSION['username'];
 ?>
 
 <html>
@@ -9,19 +8,18 @@ $_SESSION['username'] = (isset($_SESSION['username'])) ? $_SESSION['username'] :
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="authorization.css">
         <?php if ($_SESSION['username']){?>
-        <div align="center" class="form-inner">
-            <strong>Вы уже вошли</strong>
-            <a href="main.php"><strong>назад</strong></a></div>
+            <div class="check"><label for="exit">Вы уже вошли</label><br>
+            <a href="main.php"><strong>назад <span>&#127950;</span></strong></a></div>
         <?php }else{?>
         <form action="input_obrab.php" method="post" name="form" class="transparent">
-            <div class="form-inner">
+        <div>
             <h3>Вход</h3>
-            <label for="username">Введите логин</label>
-            <input name="login" type="varchar" required  id="username">
-            <label for="password">Введите пароль</label>
-            <input name="password" type="password" required id="password">
-            <input name="submit" type="submit" value="войти" required>
-            <label>Вы ещё не зарегистрированы?</label>
+            <label for="username">Введите логин</label><br>
+            <input name="login" type="varchar" required><br>
+            <label for="password">Введите пароль</label><br>
+            <input name="password" type="password" required><br><br>
+            <input name="submit" type="submit" value="войти" required><br><br><br><br>
+            <label>Вы ещё не зарегистрированы?</label><br>
             <a href="registration.php"><strong>зарегистрироваться</strong></a></div>
         </form>
         <?php }?>
