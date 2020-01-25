@@ -6,13 +6,11 @@
 session_start();
 $username = $_SESSION['username'];
 if(empty($_GET['select'])){ $select='-'; }  else{   $select = $_GET['select'];}
-//echo 'в самом начале get select = '.$select.'<br>';
 require_once 'connection.php';
 $link = mysqli_connect($host, $user, $password, $database) 
     or die("Ошибка " . mysqli_error($link));
 
 $find_username_id = mysqli_query($link,"SELECT id FROM users WHERE name = '$username'");
-//var_dump($find_username_id);
 $username_id = mysqli_fetch_array($find_username_id)['id'];
 
 if($select == 'know_user'){
@@ -34,16 +32,13 @@ if(ctype_digit($phone_number_for_booking)!='false' or ctype_digit($count_tickets
 $find_price = mysqli_query($link,"SELECT * FROM tribunes WHERE name_tribune = '$tribune'");
 $price = mysqli_fetch_row($find_price);
 $status = 'processing';
-//echo 'price трибуны = '.$price[1].' трибуна = '.$tribune;
 $total_amount = $count_tickets*$price[1];
 
 $required_res1 = mysqli_query($link,"SELECT max(id) FROM booking");
 $max_id_booking = mysqli_fetch_row($required_res1);
 $bId = 1 + (int)$max_id_booking[0];
-//print '<br>номер брони = '.$bId.', username_id = '.$username_id.', '.$tribune.', count_tickets = '.$count_tickets.', '.$total_amount.', '.$status;
 
 $result = $price[0];
-//echo '  tr = '.$result;
 
 $result1 = mysqli_query($link,"INSERT INTO booking (id,user_id,tribune,quantity,total_amount,status) VALUES ('$bId','$username_id','$result','$count_tickets','$total_amount','$status')");
 if ($result1!='true'){
@@ -59,15 +54,12 @@ else{
             mysqli_query($link,"UPDATE users set email='$email' WHERE name = '$username'");
         }
         
-        
         know_the_list_user:
         $result2 = mysqli_query($link,"SELECT id, tribune, quantity, status FROM booking WHERE user_id = '$username_id'");
-//        echo 'проверка на существование заказов - '.$result2["current_field"];
         $my_row = mysqli_fetch_array($result2);
-//        var_dump($result2);
         if (!isset($my_row)){
-            echo '<meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            echo '<title>Мои билеты</title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
                     <link rel="stylesheet" type="text/css" href="main.css">
                     <body>
                     <img src="images\F1_heading_new.jpg" height="101px" alt="header" class="header"><br><br><br><br><br>
@@ -78,8 +70,8 @@ else{
             exit();
         }
         
-        echo '<meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        echo '<title>Мои билеты</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
                 <link rel="stylesheet" type="text/css" href="main.css">
                 <body>
                 <img src="images\F1_heading_new.jpg" height="101px" alt="header" class="header"><br><br><br><br><br>
@@ -95,7 +87,6 @@ else{
                         </tr>';
 
         while($my_row){
-//            var_dump($my_row);
             echo '<tr><th>'.$username.'</th>
                             <td>Гран-при России</td>
                             <td>'.$my_row['tribune'].'</td>
@@ -111,8 +102,8 @@ else{
         }
         
         know_the_list_admin:
-            echo '<meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            echo '<title>Все билеты</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
                 <link rel="stylesheet" type="text/css" href="main.css">
                 <body>
                 <img src="images\F1_heading_new.jpg" height="101px" alt="header" class="header"><br><br><br><br><br>
@@ -129,7 +120,6 @@ else{
         
             $result5 = mysqli_query($link,"SELECT * FROM booking");
             while($my_row5 = mysqli_fetch_array($result5)){
-                //var_dump($my_row5);// здесь будет user_id, а username если нажать подробнее(в сыром варианте, потом сделаю)
                 echo '<tr><th>'.$my_row5['id'].'</th>
                                 <td>Гран-при России</td>
                                 <td>'.$my_row5['tribune'].'</td>
@@ -140,7 +130,6 @@ else{
             }
     }
 
-        #header("Refresh: 10;  url=input.php");
 the_end:
     
         echo '</table>

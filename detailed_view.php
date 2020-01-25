@@ -10,8 +10,8 @@ require_once 'connection.php';
 $link = mysqli_connect($host, $user, $password, $database) 
     or die("Ошибка " . mysqli_error($link));
 
-echo '<meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+echo '<title>Подробный просмотр</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="main.css">
         <body>
         <form action="status_obrab.php" method="post" name="form"> <!--если не получиться через ifЫ-->
@@ -30,13 +30,10 @@ echo '<meta charset="UTF-8">
 
 $id_reservation = $_GET['ID'];
 $_SESSION['bookingID'] = $id_reservation;
-//echo '$id_reservation = '.$id_reservation.'$_GET[ID] = '.$_GET['ID'];
 $result = mysqli_query($link,"SELECT * FROM booking WHERE id = '$id_reservation'");
-//var_dump($result);
 $my_row = mysqli_fetch_array($result);
 $uId = $my_row['user_id'];
 $find_username = mysqli_query($link,"SELECT name FROM users WHERE id = '$uId' ");
-//var_dump($find_username);
 $name = mysqli_fetch_array($find_username)['name'];
 
 echo '<tr><td>'.$name.'</td>
@@ -83,7 +80,5 @@ echo '</div>
         </form>
     </body>';
 
-
-#header("Refresh: 10;  url=input.php");
 mysqli_close($link);
 ?>

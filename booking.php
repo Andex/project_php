@@ -56,8 +56,7 @@ $_SESSION['phone'] = $phone_number;
                     <legend>Можете указать почту для оповещения об изменении статуса брони</legend>
                     <input type="text" name="email" size="32"><br>
                 </fieldset>
-                <button type="submit" class="button">ЗАБРОНИРОВАТЬ</button><a href="choose_ticket.php" class="button">К схеме трибун</a></div>
-                       
+                <button type="submit" class="button">ЗАБРОНИРОВАТЬ</button><a href="choose_ticket.php" class="button">К схеме трибун</a></div>        
         </form>
     </body>
 </html>

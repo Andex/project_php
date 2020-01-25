@@ -11,7 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <link rel="stylesheet" type="text/css" href="main.css">
-        <body><!--<form action="booking.php" method="post" name="form">-->
+        <body>
+        <form action="">
         <div align="center">
         <img src="images\F1_heading_new.jpg" height="100px" alt='header' class="header"><br><br><br><br><br>
         <br><br><strong>Выберете трибуну</strong>
@@ -36,6 +37,6 @@
         </table><br>
         <img src="images\Track_with_stands.jpg" width="1000px" alt='tribunes'>
         </div>
-        <!--</form>-->
+        </form>
     </body>
 </html>

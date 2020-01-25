@@ -1,5 +1,4 @@
 body {background: #2c2c34;}
-/*#2c2c34*/
 div.text a {
   text-decoration: none;
   outline: none;
@@ -52,8 +51,6 @@ a.exit:hover {
     font-variant: small-caps;    /*строчные буквы как заглавные уменьшенного размера*/
     color: white;
     padding: 20px;
-/*    text-align: center;
-    width: 800px;*/
 }
 p {
     font-size: 28px;
@@ -67,9 +64,7 @@ img.header{
     top: 0px;
     left: 0px;
 }
-img {
-    position: relative;
-}
+img {position: relative;}
 strong{
     font-size: 36;
     font-family: "Century Gothic";
@@ -86,7 +81,6 @@ strong{
 }
 table{
     border: 0;
-    /*background: rgba(255, 255, 255, 0.4);*/
 }
 table tr:first-child{
     background: white;
@@ -94,7 +88,6 @@ table tr:first-child{
 }
 td{text-align: center;}
 th{color: red;}
-
 select{
     font-size: 30px;
     font-weight: bold;
@@ -104,12 +97,7 @@ select{
     color: red;
     background-color: #2c2c34;
     padding: 20px;
-/*    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;*/
 }
-
-
 .button {
   text-decoration: none;
   outline: none;
@@ -117,6 +105,7 @@ select{
   width: 200px;
   height: 45px;
   line-height: 45px;
+  border: 0;
   border-radius: 45px;
   margin: 10px 20px;
   font-family: 'Montserrat', sans-serif;
