@@ -1,55 +1,61 @@
-/** {box-sizing: border-box;}*/
-
 form {
-  /*position: relative;*/
+  position: relative;
   max-width: 1920px;
-  max-height: 1080px;
-  padding: 60px 50px;
-  top: 0px;
-  left: 0px;
-  /*margin: 50px 50px;*/
+  max-height: 548px;
+  padding: 240px 250px;
+  line-height: 70px;
   background-image: url(images/car.jpg);
-  /*background-position: center center;*/
   background-size: cover;
-  background-color: red;
 }
-/*.form-inner {position: relative;}*/
 div h3 {
-/*  position: relative;
-  margin: 100 20;*/
+  margin-top: -195;
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 46px;
+  font-size: 50px;
   text-transform: uppercase;
 }
 div label {
-  /*padding-left: 15px;*/
+  padding-left: 60px;
   font-family: 'Roboto', sans-serif;
-  color: rgba(255,255,255,.6);
+  color: white;
   text-transform: uppercase;
-  font-size: 26px;
+  font-size: 36px;
+  margin-left: -50;
 }
 div input {
-  font-size: 36px;
+  font-size: 40px;
   width: 30%;
-/*  padding: 0 45px;
-  margin: 10px 0 15px;*/
   border-width: 0;
-  line-height: 40px;
   border-radius: 20px;
   color: white;
-  background: rgba(255,255,255,.2);
+  background: rgba(255,255,255,.4);
   font-family: 'Roboto', sans-serif;
 }
-/*div input[type="submit"] {
-    background: #2c2c34; 
-    font-size: 28px;
-    font-weight: 100;
-}*/
-
+div input[type="submit"] {
+    background: rgba(255,255,255,.3);
+    border-radius: 40px;
+    border-width: 0;
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 60px;
+    width: 25%;
+}
 strong{
+    color: white; 
+    font-size: 60px;
+    font-family: 'segoe script', sans-serif;
+    font-style: italic;
+    line-height: 40px;
+}
+span{
     color: white;
-    background: #2c2c34; 
-    font-size: 28px;
+    font-size: 100px;
+    font-weight: 400;
+}
+.check{
+  background-image: url(images/car.jpg);
+  background-size: cover;
+  padding: 460px 450px;
 }
