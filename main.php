@@ -1,5 +1,5 @@
 <?php
-//главная страница - сюда передаётся username
+//главная страница - из сессии username
 //придти можно с choose_ticket, booking_list_user и booking_list_admin
 //переход на choose_ticket, booking_list_user и booking_list_admin
 

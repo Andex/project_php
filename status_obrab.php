@@ -1,5 +1,5 @@
 <?php
-//здесь админ обновляет статус брони - сюда передаётся id_reservation, username=admin
+//здесь админ обновляет статус брони - из сессии берется id_reservation, а username=admin
 //можно придти только с detalied_view и уйти на booking_list_user
 
 session_start();
