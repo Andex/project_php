@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['username'] = (isset($_SESSION['username'])) ? $_SESSION['username'] : 0; //true - что-то есть и не null
+$_SESSION['username'] = (isset($_SESSION['username'])) ? $_SESSION['username'] : 0;
 ?>
 
 <html>
