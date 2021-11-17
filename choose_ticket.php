@@ -2,7 +2,6 @@
 //схема автодрома и трибун
 //можно придти только с main(_for_user)
 //переход только на booking и вернуться на main(_for_user)
-//session_start();
 ?>
 <html>
     <head>
