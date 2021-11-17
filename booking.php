@@ -1,7 +1,4 @@
 <?php
-//пользователь выбирает трибуну и бронирует - сюда передаётся username, phone_number(?), в идеале еще трибуны
-//можно придти только с choose_ticket
-//переход на booking_list_user и choose_ticket(к схеме триьбун)
 $select = $_GET['select'];
 session_start();
 $username = $_SESSION['username'];
