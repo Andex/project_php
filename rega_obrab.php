@@ -43,7 +43,7 @@ else{
     $_SESSION['username'] = $new_name;
     echo '<h3>'.'Поздравляем, Вы успешно зарегестрированы!'.'</h3>';
     
-    $required_res1 = mysqli_query($link,"SELECT max(id) FROM users");   # LAST_INSERT_ID можно использовать и в запросе добавлять без id - он будет автоматически
+    $required_res1 = mysqli_query($link,"SELECT max(id) FROM users");
     $required_res2 = mysqli_query($link,"SELECT max(id) FROM passwords");
     $required_res3 = mysqli_query($link,"SELECT max(id) FROM hashes");
     
